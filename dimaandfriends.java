@@ -9,19 +9,18 @@ public class dimaandfriends {
         for(int i=0;i<s;i++){
             arr[i]= hariom.nextInt();
         }
-        int totalfingers=0;
-        for(int i=0;i<s;i++){
-            totalfingers = totalfingers+arr[i];
+        int sumfriends=0;
+       for(int i=0;i<s;i++){
+        sumfriends=sumfriends+arr[i];
+       }
+       int validways=0;
+       for(int dimafingers=1;dimafingers<=5;dimafingers++){
+        int totalfingers=sumfriends + dimafingers;
+        int position = (totalfingers-1)%(s+1);
+        if(position!=0){
+            validways++;
         }
-       // System.out.println(totalfingers);
-        int ways =0;
-        
-        for(int i=1;i<=5;i++){
-            if((totalfingers+i)%(s+1)==0){
-                ways++;
-            }
-        }
-        System.out.println(ways);
-       
+       }
+       System.out.println(validways);
     }
 }
