@@ -43,7 +43,6 @@ public class yaroslavandpermutations {
     }
 }*/
 import java.util.*;
-
 public class yaroslavandpermutations {
     public static void main(String[] args) {
         Scanner hariom = new Scanner(System.in);
@@ -52,17 +51,15 @@ public class yaroslavandpermutations {
         for (int i = 0; i < n; i++) {
             arr[i] = hariom.nextInt();
         }
-
         if (n == 1) {
             System.out.println("YES");
             return;
         }
-
-        HashMap<Integer, Integer> freqMap = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
-            freqMap.put(arr[i], freqMap.getOrDefault(arr[i], 0) + 1);
+            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
         }
-        int maxFrequency = Collections.max(freqMap.values());
+        int maxFrequency = Collections.max(map.values());
         if (maxFrequency > (n + 1) / 2) {
             System.out.println("NO");
         } else {

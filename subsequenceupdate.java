@@ -12,7 +12,6 @@ public class subsequenceupdate {
                 arr[i]=hariom.nextInt();
             }
             
-
             int revarr[]=new int[s];
             for(int i=s-1;i>=0;i--){
                 revarr[s-1-i]=arr[i];
