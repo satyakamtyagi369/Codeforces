@@ -19,7 +19,12 @@ public class maximumdiffevenandodd {
             } else {
                 maxodd = Math.max(maxodd, freq); 
             }
+            if (maxeven == 0 || maxodd == 0) {
+                System.out.println(-1);
+                return;
+            }
         }
         System.out.println(maxodd - maxeven);
+       
     }
 }
