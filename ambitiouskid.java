@@ -12,6 +12,7 @@ public class ambitiouskid{
                 if (minops == 0) break;
             }
         }
+        
         System.out.println(minops);
     }
 }
