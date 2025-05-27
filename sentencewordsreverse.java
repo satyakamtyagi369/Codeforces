@@ -15,7 +15,6 @@ public class sentencewordsreverse{
         }
      }
      return str.toString();
-
     }
     public static void main(String[] args){
         Scanner hariom = new Scanner(System.in);
